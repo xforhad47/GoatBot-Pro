@@ -12,7 +12,7 @@
   "antiInbox": false,
   "language": "en",
   "notesLanguage": "change language using ISO 639-1 code",
-  "nickNameBot": "𝙃𝙞𝙣𝙖𝙏'𝙖 𝙐𝙯𝙪𝙢𝙖𝙆'𝙞𝙞 ᯓᡣ𐭩",
+  "nickNameBot": "𝐒𝐀𝐃𝐈 𝐂𝐇𝐀𝐓 𝐁𝐎𝐓",
   "prefix": "/",
   "enableTypingIndicator": true,
   "typingDuration": 2000,
@@ -30,8 +30,8 @@
     "ignoreCommand": []
   },
   "adminBot": [
-    "61592832917083",
-    " ",
+    "61569092843763",
+    "61589102414792",
     " "
   ],
   "reactUnsend": {
