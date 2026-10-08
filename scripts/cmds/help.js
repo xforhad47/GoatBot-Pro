@@ -103,9 +103,9 @@ module.exports = {
     msg += `\n╰─ Use: ${prefix}help <command>`;
 
     const gifURLs = [
-      "https://i.imgur.com/Xw6JTfn.gif",
-      "https://i.imgur.com/mW0yjZb.gif",
-      "https://i.imgur.com/KQBcxOV.gif"
+      "https://i.imgur.com/YIpKyLL.jpeg",
+      "https://i.imgur.com/ABF5O01.jpeg",
+      "https://i.imgur.com/HJ7DQIz.jpeg"
     ];
 
     const randomGifURL = gifURLs[Math.floor(Math.random() * gifURLs.length)];
