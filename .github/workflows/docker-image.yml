@@ -1,18 +1,36 @@
-name: Docker Image CI
+module.exports = {
+  config: {
+    name: "commandname",
+    version: "1.0.0",
+    author: "YourName",
+    countDown: 5,
+    role: 0,
+    shortDescription: "...",
+    longDescription: "...",
+    category: "fun",
+    guide: "{prefix}commandname [args]"
+  },
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  onStart: async function ({ api, event, args, message, getLang }) {
+    message.reply("Hello!");
+  },
 
-jobs:
+  onReply: async function ({ api, event, Reply, message }) {
+    if (event.senderID !== Reply.author) return;
+    message.reply(`You replied: ${event.body}`);
+  },
 
-  build:
+  onReaction: async function ({ api, event, Reaction, message }) {
+    message.reply(`You reacted with: ${event.reaction}`);
+  },
 
-    runs-on: ubuntu-latest
+  onChat: async function ({ api, event, message }) {
+    if (event.body === "hello") message.reply("hi!");
+  },
 
-    steps:
-    - uses: actions/checkout@v4
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+  onEvent: async function ({ api, event, message }) {
+    if (event.logMessageType === "log:subscribe") {
+      message.reply("Welcome!");
+    }
+  }
+};
